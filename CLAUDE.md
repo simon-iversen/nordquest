@@ -47,6 +47,19 @@ python3 tools/generate_backend_docs.py
 
 from the `nordquest_supabase/` directory. This regenerates docs in `docs/backend/generated/`.
 
+## Umbrella Repo Sync
+
+This directory is an umbrella git repo with all sub-repos as git submodules. After pushing commits in any sub-repo, update the umbrella so Claude Code on the web sees the latest:
+
+```bash
+cd /Users/simoniversen/Development/nordquest
+git add nordquest_app nordquest_supabase nordquest_tools nordquest_worker nordquest_homepage
+git commit -m "Update submodule pointers"
+git push
+```
+
+Do this automatically after any `git push` in a sub-repo — no need to ask the user.
+
 ## Key Cross-Repo Contracts
 
 - The RPC functions `update_pending_matching_job_to_running` and `update_pending_job_to_running` are called by the workers to claim jobs. Never change their signatures without coordinating changes in both `nordquest_supabase/` (migration) and `nordquest_worker/` (code).
