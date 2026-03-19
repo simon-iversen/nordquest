@@ -1,0 +1,15 @@
+[submodule "nordquest_app"]
+	path = nordquest_app
+	url = https://github.com/simon-iversen/nordquest-app.git
+[submodule "nordquest_supabase"]
+	path = nordquest_supabase
+	url = https://github.com/simon-iversen/nordquest-supabase.git
+[submodule "nordquest_tools"]
+	path = nordquest_tools
+	url = https://github.com/simon-iversen/nordquest-tools.git
+[submodule "nordquest_worker"]
+	path = nordquest_worker
+	url = https://github.com/simon-iversen/nord_app_workers.git
+[submodule "nordquest_homepage"]
+	path = nordquest_homepage
+	url = https://github.com/simon-iversen/nordquest_homepage.git
